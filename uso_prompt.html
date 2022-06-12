@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaIMC(peso, altura) {
+            return imc = peso / (altura ^ 2);
+            //return imc;
+        }
+        //obs: caso use "," em float o valor  vai sair errado 
+        //obs: float em javascript certo é com "." = 1.73
+        //com virgula: 1,73 = 173  com ponto: 1.73 = 1.73
+        var nomeInformado = prompt("Informe seu nome: ")
+        var pesoInformado = prompt("Informe seu peso: ");// o peso é 73kg
+        var alturaInformado = prompt("Informe sua altura: ");// altura é 1.73 
+        var imcInformado = calculaIMC(pesoInformado, alturaInformado);
+        mostra(nomeInformado+",o seu IMC é: " + Math.round(imcInformado));//o resultado será aproximadamente 24
+
+    </script>
+</body>
+
+</html>

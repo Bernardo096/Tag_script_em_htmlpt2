@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var loginCadastrado = "alura";
+        var senhaCadastrada = "alura321";
+        var tentativas = 1
+        var tentativasMaximo = 3
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+        while (tentativas <= tentativasMaximo) {
+            if (loginCadastrado != loginInformado && senhaCadastrada != senhaInformada) {
+
+                alert("Login inválido.Tente novamente");
+                var loginInformado = prompt("Informe seu login");
+                var senhaInformada = prompt("Informe sua senha");
+                
+            } else if (tentativas == tentativasMaximo) {
+
+                alert("Login inválido. Maximo de tentativas atingido.Volte mais tarder");
+
+            } else {
+                
+                alert("Bem-vindo ao sistema " + loginInformado);
+                tentativas = tentativasMaximo;
+              
+            }
+            tentativas++;
+        }
+    </script>
+</body>
+
+</html>
